@@ -1,0 +1,176 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    @extend %geo-300;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.05em;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+
+
+.container {
+    margin: 0 auto;
+    max-width: 1150px;
+    padding: 0 15px;
+}
+
+.header {
+    padding: 62px 0 340px;
+    background-image: url(../images/header-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__wrapper {}
+
+
+    &__top {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 200px;
+        z-index: 1;
+    }
+
+    .menu {
+        &__list {
+            display: flex;
+            gap: 16px;
+        }
+
+        &__link {
+            font-size: 18px;
+            line-height: 15px;
+            color: #000;
+            transition: all .4s;
+
+            &:hover {
+                color: #aa8b8b;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .user-nav {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        &__link {
+            padding: 15px;
+            background: #fff;
+            border-radius: 50%;
+            position: relative;
+
+            span {
+                position: absolute;
+                top: -6px;
+                right: -1px;
+                font-size: 8px;
+                line-height: 10px;
+                width: 8px;
+                height: 10px;
+                /* text-align: center; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                color: #fff;
+                background: #447aff;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 860px;
+            height: 835px;
+            background-image: url(../images/ranger.png);
+            top: -230px;
+            left: 400px;
+            object-fit: cover;
+            background-repeat: no-repeat;
+            filter: drop-shadow(33px 12px 10px rgba(0, 0, 0, 0.25));
+            // transform: rotate(-4.62deg);
+        }
+    }
+
+    &__title {
+        @extend %geo-700;
+        font-size: 60px;
+        line-height: 75px;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        //  max-width: 370px;
+        margin-bottom: 45px;
+    }
+
+    .price-box {
+        display: flex;
+        gap: 70px;
+        align-items: center;
+
+        &__price {
+            @extend %geo-500;
+            font-size: 30px;
+            line-height: 38px;
+            letter-spacing: 0.05em;
+
+            span {
+                display: block;
+                @extend %geo-300;
+                font-size: 13px;
+                line-height: 16px;
+                letter-spacing: 0.05em;
+            }
+        }
+
+        button {
+            border: none;
+        }
+
+        &__btn {
+            @extend %geo-500;
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            color: #fff;
+            padding: 25px 74px;
+            background: linear-gradient(205.52deg, #002766 4.94%, #447AFF 101.9%);
+            border-radius: 35px;
+            cursor: pointer;
+            transition: all .4s;
+
+            &:hover {
+                transition: all 0.4s;
+                transform: translateY(-4px);
+                box-shadow: 0 8px 14px rgba(36, 7, 71, 0.4);
+            }
+        }
+    }
+}
+
+
+
+
+@import 'media';
